@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lifestyle Wellness Center</title>
+  <style>
+    :root {
+      --accent: #0f9d58;
+      --accent-dark: #0b7a44;
+      --bg: #f8c10d;
+      --card: #ffffff
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      margin: 0;
+      background: var(--bg);
+      color: #222
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    .logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, #fff 0, #e6f7ee 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.6rem;
+      color: #10160f
+    }
+
+    .contacts {
+      text-align: right;
+      font-size: 0.95rem
+    }
+
+    .hero {
+      margin-top: 18px;
+      background: var(--card);
+      padding: 18px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(245, 46, 46, 0.06)
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 18px
+    }
+
+    .poster {
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden
+    }
+
+    .poster img {
+      width: 100%;
+      height: auto;
+      display: block
+    }
+
+    .cta {
+      background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+      color: white;
+      padding: 12px;
+      border-radius: 8px;
+      text-align: center;
+      margin-bottom: 12px
+    }
+
+    .badge {
+      font-weight: 700
+    }
+
+    .section {
+      margin-top: 18px
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px
+    }
+
+    .service-card {
+      background: var(--card);
+      padding: 12px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(10, 10, 10, 0.04)
+    }
+
+    .contact-card {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(10, 10, 10, 0.04);
+      background: linear-gradient(180deg, #fff, #f8fffb)
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      font-weight: 600
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      margin-bottom: 8px
+    }
+
+    footer {
+      margin-top: 20px;
+      text-align: center;
+      color: #090606;
+      font-size: 0.9rem
+    }
+
+    @media (max-width:880px) {
+      .hero-grid {
+        grid-template-columns: 1fr
+      }
+
+      .two-col {
+        grid-template-columns: 1fr
+      }
+    }
+
+    /* WhatsApp Button */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 3000;
+    }
+
+    .whatsapp-btn img {
+      width: 50%;
+      height: 60px;
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+
+    .whatsapp-btn img:hover {
+      transform: scale(1.1);
+    }
+
+    .slider {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-top: 20px
+    }
+
+    .slides {
+      display: flex;
+      width: 300%;
+      animation: slide 12s infinite
+    }
+
+    .slide {
+      width: 100%
+    }
+
+    .slide img {
+      width: 100%;
+      display: block
+    }
+
+    @keyframes slide {
+      0% {
+        margin-left: 0
+      }
+
+      30% {
+        margin-left: 0
+      }
+
+      35% {
+        margin-left: -100%
+      }
+
+      65% {
+        margin-left: -100%
+      }
+
+      70% {
+        margin-left: -200%
+      }
+
+      100% {
+        margin-left: -200%
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">LW</div>
+        <div>
+          <h1>Lifestyle Wellness Center</h1>
+          <div style="font-size:0.95rem;color:#1b0e0e">Body Transformation Classes • Online & Offline</div>
+        </div>
+      </div>
+      <div class="contacts">
+        <div><strong>Sachin Arya</strong> • <strong>Sangeeta Rawal</strong></div>
+        <div style="margin-top:6px;">M: 9899970174, 9354129034</div>
+      </div>
+    </header>
+
+
+
+
+    <main class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="cta">
+            <div class="badge">3 Days Free Demo Class • Online Counseling</div>
+            <div style="font-size:0.95rem;margin-top:6px">रोज सुबह ऑनलाइन अपने घर से वर्कआउट जुड़ने के लिए संपर्क करें
+            </div>
+          </div>
+
+          <div class="slider">
+            <div class="slides">
+              <div class="slide"><img src="image/gym.jpg" alt="Slide 1" height="400px"></div>
+              <div class="slide"><img src="image/2boy.jpeg" alt="Slide 2" height="400px"></div>
+              <div class="slide"><img src="image/yoga.jpeg" alt="Slide 3" height="400px"></div>
+            </div>
+          </div>
+
+         
+
+
+              <div class="section">
+                <h2 style="margin:6px 0">Free Body Fat Checkup</h2>
+                <p>फ्री बॉडी फैट चेकअप और फॉलो-अप प्लान। ऑनलाइन व इन-पर्सनल क्लासेज उपलब्ध।</p>
+                <a class="btn" href="#contact">Book Free Demo</a>
+              </div>
+            </div>
+
+            <aside class="contact-card">
+              <div class="poster">
+
+                <img src="image/najim.avif" alt="Lifestyle Wellness Center Poster" style="width: 100%;">
+              </div>
+
+              <div style="margin-top:12px">
+                <strong>Address:</strong>
+                <div>Arya Samaj Mandir Ghodi Bachhera, Sec. Mu-2, Greater Noida</div>
+              </div>
+
+              <div style="margin-top:12px">
+                <strong>Call / WhatsApp:</strong>
+                <div>9899970174 • 9354129034</div>
+              </div>
+            </aside>
+          </div>
+
+           <div class="section">
+            <h2 style="margin:6px 0">Our Promise</h2>
+            <div class="two-col">
+              <div class="service-card">
+                <h3 style="margin-top:0">आपकी समस्या</h3>
+                <ul>
+                  <li>बॉडी फैट</li>
+                  <li>अनडेसायर्ड फैट</li>
+                  <li>मांसपेशियां</li>
+                  <li>पाचन तंत्र</li>
+                  <li>वजन</li>
+                  <li>हाइट</li>
+                </ul>
+              </div>
+
+
+              <div class="service-card">
+                <h3 style="margin-top:0">हमारी सेवाएँ</h3>
+                <ul>
+                  <li>वजन घटायें या वजन बढ़ायें</li>
+                  <li>ह्रदय हेल्थ</li>
+                  <li>जोड़ों का दर्द</li>
+                  <li>रोग प्रतिरोधक</li>
+                  <li>त्वचा और बाल</li>
+                  <li>बच्चों का मानसिक व शारीरिक विकास</li>
+                </ul> 
+             </div>
+
+          <div class="section">
+            <h2 style="margin:6px 0">Before / After</h2>
+            <p>Real client transformations — add testimonials and photos here.</p>
+            <div class="slider">
+            <div class="slides">
+              <div class="slide"><img src="image/lifestyle.png" alt="Slide 1" height="400px"></div>
+              <div class="slide"><img src="image/lifestyle2.png" alt="Slide 2" height="400px"></div>
+              <div class="slide"><img src="image/lifestyle3.png" alt="Slide 3" height="400px"></div>
+            </div>
+          </div>
+          </div>
+           
+
+
+
+          <div class="section" id="contact">
+            <h2 style="margin:6px 0">Get in touch</h2>
+            <div class="two-col">
+              <div class="service-card">
+                <form onsubmit="event.preventDefault();alert('Thanks — we will call you!');">
+                  <input type="text" name="name" placeholder="Your name" required />
+                  <input type="tel" name="phone" placeholder="Phone number" required />
+                  <textarea name="message" rows="4" placeholder="Message (e.g., Book free demo)"></textarea>
+                  <button class="btn" type="submit">Request Demo</button>
+                </form>
+              </div>
+
+              <div class="service-card">
+                <h3 style="margin-top:0">Opening Hours</h3>
+                <p>Morning online workout classes daily. Flexible timings for personal training.</p>
+
+                <h4 style="margin-bottom:6px">Languages</h4>
+                <p>Hindi & English</p>
+
+                <!-- WHATSAPP BUTTON -->
+                <a class="whatsapp-btn" href="https://wa.me/919876543210" target="_blank">
+                  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+                    style="width: 80%; height: 50px; float: left;">
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+
+
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Lifestyle Wellness Center — <em>Contact: 9899970174 / 9354129034</em></div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
